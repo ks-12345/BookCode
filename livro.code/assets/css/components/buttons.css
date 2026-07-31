@@ -1,0 +1,440 @@
+/* ==========================================================
+   LIVRO.CODE
+   Buttons CSS
+   Sistema de Botões
+   Versão: 1.0
+========================================================== */
+
+/* ==========================================================
+   BASE BUTTON
+========================================================== */
+
+.btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:var(--space-2);
+
+    padding:12px 22px;
+
+    min-height:46px;
+
+    border:1px solid transparent;
+    border-radius:var(--radius-md);
+
+    font-family:var(--font-primary);
+    font-size:var(--text-base);
+    font-weight:var(--font-semibold);
+
+    cursor:pointer;
+    user-select:none;
+
+    transition:
+        background var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast),
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+
+    white-space:nowrap;
+}
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.btn:active{
+
+    transform:translateY(0);
+
+}
+
+.btn:focus-visible{
+
+    outline:none;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.20);
+
+}
+
+/* ==========================================================
+   PRIMARY
+========================================================== */
+
+.btn-primary{
+
+    background:var(--primary-600);
+
+    color:white;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-700);
+
+}
+
+/* ==========================================================
+   SECONDARY
+========================================================== */
+
+.btn-secondary{
+
+    background:var(--secondary-600);
+
+    color:white;
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--secondary-700);
+
+}
+
+/* ==========================================================
+   SUCCESS
+========================================================== */
+
+.btn-success{
+
+    background:var(--success-600);
+
+    color:white;
+
+}
+
+.btn-success:hover{
+
+    background:var(--success-700);
+
+}
+
+/* ==========================================================
+   WARNING
+========================================================== */
+
+.btn-warning{
+
+    background:var(--warning-500);
+
+    color:white;
+
+}
+
+.btn-warning:hover{
+
+    background:var(--warning-600);
+
+}
+
+/* ==========================================================
+   DANGER
+========================================================== */
+
+.btn-danger{
+
+    background:var(--danger-600);
+
+    color:white;
+
+}
+
+.btn-danger:hover{
+
+    background:var(--danger-700);
+
+}
+
+/* ==========================================================
+   OUTLINE
+========================================================== */
+
+.btn-outline{
+
+    background:transparent;
+
+    border-color:var(--border);
+
+    color:var(--text);
+
+}
+
+.btn-outline:hover{
+
+    background:var(--surface-hover);
+
+    border-color:var(--primary-600);
+
+    color:var(--primary-600);
+
+}
+
+/* ==========================================================
+   GHOST
+========================================================== */
+
+.btn-ghost{
+
+    background:transparent;
+
+    color:var(--text);
+
+}
+
+.btn-ghost:hover{
+
+    background:var(--surface-hover);
+
+}
+
+/* ==========================================================
+   LINK
+========================================================== */
+
+.btn-link{
+
+    background:none;
+
+    padding:0;
+
+    min-height:auto;
+
+    border:none;
+
+    color:var(--primary-600);
+
+    font-weight:600;
+
+}
+
+.btn-link:hover{
+
+    color:var(--primary-700);
+
+    text-decoration:underline;
+
+    transform:none;
+
+}
+
+/* ==========================================================
+   ICON BUTTON
+========================================================== */
+
+.btn-icon{
+
+    width:46px;
+
+    height:46px;
+
+    padding:0;
+
+    border-radius:50%;
+
+}
+
+.btn-icon svg{
+
+    width:20px;
+
+    height:20px;
+
+}
+
+/* ==========================================================
+   SIZES
+========================================================== */
+
+.btn-sm{
+
+    min-height:36px;
+
+    padding:8px 16px;
+
+    font-size:var(--text-sm);
+
+}
+
+.btn-md{
+
+    min-height:46px;
+
+}
+
+.btn-lg{
+
+    min-height:56px;
+
+    padding:16px 28px;
+
+    font-size:var(--text-lg);
+
+}
+
+/* ==========================================================
+   BLOCK
+========================================================== */
+
+.btn-block{
+
+    width:100%;
+
+}
+
+/* ==========================================================
+   DISABLED
+========================================================== */
+
+.btn:disabled,
+.btn.disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   LOADING
+========================================================== */
+
+.btn-loading{
+
+    pointer-events:none;
+
+    opacity:.85;
+
+}
+
+.btn-loading::before{
+
+    content:"";
+
+    width:18px;
+
+    height:18px;
+
+    border:2px solid rgba(255,255,255,.35);
+
+    border-top-color:white;
+
+    border-radius:50%;
+
+    animation:btn-spin .8s linear infinite;
+
+}
+
+/* ==========================================================
+   BADGE
+========================================================== */
+
+.btn-badge{
+
+    position:relative;
+
+}
+
+.btn-badge::after{
+
+    content:attr(data-badge);
+
+    position:absolute;
+
+    top:-6px;
+
+    right:-6px;
+
+    min-width:20px;
+
+    height:20px;
+
+    padding:0 6px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:999px;
+
+    background:var(--danger-600);
+
+    color:#fff;
+
+    font-size:.70rem;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   BUTTON GROUP
+========================================================== */
+
+.btn-group{
+
+    display:inline-flex;
+
+    gap:var(--space-3);
+
+    flex-wrap:wrap;
+
+}
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
+
+@keyframes btn-spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:768px){
+
+    .btn{
+
+        width:100%;
+
+    }
+
+    .btn-group{
+
+        display:flex;
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+    .btn-icon{
+
+        width:46px;
+
+    }
+
+}

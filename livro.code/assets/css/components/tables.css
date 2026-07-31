@@ -1,0 +1,347 @@
+/* ==========================================================
+   LIVRO.CODE
+   Tables CSS
+   Sistema de Tabelas
+   Versão: 1.0
+========================================================== */
+
+/* ==========================================================
+   TABLE RESPONSIVE
+========================================================== */
+
+.table-responsive{
+
+    width:100%;
+
+    overflow-x:auto;
+
+    margin:var(--space-8) 0;
+
+    border-radius:var(--radius-lg);
+
+}
+
+/* ==========================================================
+   TABLE
+========================================================== */
+
+.table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    overflow:hidden;
+
+    border-radius:var(--radius-lg);
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.table thead{
+
+    background:var(--primary-600);
+
+}
+
+.table thead th{
+
+    padding:16px 20px;
+
+    text-align:left;
+
+    color:white;
+
+    font-weight:600;
+
+    font-size:.95rem;
+
+    letter-spacing:.03em;
+
+    white-space:nowrap;
+
+}
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+.table tbody tr{
+
+    transition:background var(--transition-fast);
+
+}
+
+.table tbody tr:hover{
+
+    background:var(--surface-hover);
+
+}
+
+/* ==========================================================
+   CELLS
+========================================================== */
+
+.table td{
+
+    padding:16px 20px;
+
+    color:var(--text-secondary);
+
+    border-top:1px solid var(--border);
+
+    vertical-align:top;
+
+}
+
+/* ==========================================================
+   STRIPED
+========================================================== */
+
+.table-striped tbody tr:nth-child(even){
+
+    background:var(--surface-alt);
+
+}
+
+/* ==========================================================
+   HOVER
+========================================================== */
+
+.table-hover tbody tr:hover{
+
+    background:var(--primary-50);
+
+}
+
+/* ==========================================================
+   BORDERED
+========================================================== */
+
+.table-bordered th,
+.table-bordered td{
+
+    border:1px solid var(--border);
+
+}
+
+/* ==========================================================
+   COMPACT
+========================================================== */
+
+.table-sm th,
+.table-sm td{
+
+    padding:10px 14px;
+
+}
+
+/* ==========================================================
+   LARGE
+========================================================== */
+
+.table-lg th,
+.table-lg td{
+
+    padding:22px 28px;
+
+}
+
+/* ==========================================================
+   CENTER
+========================================================== */
+
+.table-center th,
+.table-center td{
+
+    text-align:center;
+
+}
+
+/* ==========================================================
+   RIGHT
+========================================================== */
+
+.table-right th,
+.table-right td{
+
+    text-align:right;
+
+}
+
+/* ==========================================================
+   CODE CELL
+========================================================== */
+
+.table code{
+
+    font-size:.85rem;
+
+}
+
+/* ==========================================================
+   CAPTION
+========================================================== */
+
+.table caption{
+
+    caption-side:top;
+
+    padding-bottom:16px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    color:var(--text);
+
+    text-align:left;
+
+}
+
+/* ==========================================================
+   BADGE
+========================================================== */
+
+.table-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:4px 10px;
+
+    border-radius:999px;
+
+    background:var(--primary-100);
+
+    color:var(--primary-700);
+
+    font-size:.75rem;
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+   STATUS
+========================================================== */
+
+.status-success{
+
+    color:var(--success-600);
+
+    font-weight:600;
+
+}
+
+.status-warning{
+
+    color:var(--warning-600);
+
+    font-weight:600;
+
+}
+
+.status-danger{
+
+    color:var(--danger-600);
+
+    font-weight:600;
+
+}
+
+.status-info{
+
+    color:var(--info-600);
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+   EMPTY STATE
+========================================================== */
+
+.table-empty{
+
+    text-align:center;
+
+    padding:40px;
+
+    color:var(--text-muted);
+
+}
+
+/* ==========================================================
+   SORTABLE
+========================================================== */
+
+.table-sort{
+
+    cursor:pointer;
+
+    user-select:none;
+
+    transition:color .2s;
+
+}
+
+.table-sort:hover{
+
+    color:#fff;
+
+}
+
+/* ==========================================================
+   STICKY HEADER
+========================================================== */
+
+.table-sticky thead th{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:2;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.table tfoot{
+
+    background:var(--surface-alt);
+
+}
+
+.table tfoot td{
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:768px){
+
+    .table{
+
+        min-width:700px;
+
+    }
+
+}

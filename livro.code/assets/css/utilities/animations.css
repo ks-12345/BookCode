@@ -1,0 +1,735 @@
+/* ==========================================================
+   LIVRO.CODE
+   Animation System
+   Versão: 1.0
+========================================================== */
+
+/* ==========================================================
+   ANIMATION VARIABLES
+========================================================== */
+
+:root{
+
+    --animation-fast:150ms;
+
+    --animation-normal:250ms;
+
+    --animation-slow:400ms;
+
+    --animation-extra:700ms;
+
+}
+
+/* ==========================================================
+   GLOBAL TRANSITIONS
+========================================================== */
+
+.animate{
+
+    transition:all var(--animation-normal) ease;
+
+}
+
+.animate-fast{
+
+    transition:all var(--animation-fast) ease;
+
+}
+
+.animate-slow{
+
+    transition:all var(--animation-slow) ease;
+
+}
+
+/* ==========================================================
+   FADE
+========================================================== */
+
+.fade-in{
+
+    animation:fadeIn .4s ease forwards;
+
+}
+
+.fade-out{
+
+    animation:fadeOut .4s ease forwards;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes fadeOut{
+
+    from{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        opacity:0;
+
+    }
+
+}
+
+/* ==========================================================
+   SLIDE
+========================================================== */
+
+.slide-up{
+
+    animation:slideUp .45s ease forwards;
+
+}
+
+.slide-down{
+
+    animation:slideDown .45s ease forwards;
+
+}
+
+.slide-left{
+
+    animation:slideLeft .45s ease forwards;
+
+}
+
+.slide-right{
+
+    animation:slideRight .45s ease forwards;
+
+}
+
+@keyframes slideUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+@keyframes slideDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+@keyframes slideLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+@keyframes slideRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+/* ==========================================================
+   ZOOM
+========================================================== */
+
+.zoom-in{
+
+    animation:zoomIn .35s ease forwards;
+
+}
+
+.zoom-out{
+
+    animation:zoomOut .35s ease forwards;
+
+}
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.90);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes zoomOut{
+
+    from{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        opacity:0;
+
+        transform:scale(.90);
+
+    }
+
+}
+
+/* ==========================================================
+   BOUNCE
+========================================================== */
+
+.bounce{
+
+    animation:bounce 1s;
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    30%{
+
+        transform:translateY(-10px);
+
+    }
+
+    60%{
+
+        transform:translateY(5px);
+
+    }
+
+}
+
+/* ==========================================================
+   FLOAT
+========================================================== */
+
+.float{
+
+    animation:float 3s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+
+/* ==========================================================
+   PULSE
+========================================================== */
+
+.pulse{
+
+    animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+}
+
+/* ==========================================================
+   SHAKE
+========================================================== */
+
+.shake{
+
+    animation:shake .5s;
+
+}
+
+@keyframes shake{
+
+    0%,100%{
+
+        transform:translateX(0);
+
+    }
+
+    20%{
+
+        transform:translateX(-6px);
+
+    }
+
+    40%{
+
+        transform:translateX(6px);
+
+    }
+
+    60%{
+
+        transform:translateX(-4px);
+
+    }
+
+    80%{
+
+        transform:translateX(4px);
+
+    }
+
+}
+
+/* ==========================================================
+   ROTATE
+========================================================== */
+
+.rotate{
+
+    animation:rotate 1s linear infinite;
+
+}
+
+@keyframes rotate{
+
+    from{
+
+        transform:rotate(0);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ==========================================================
+   SPINNER
+========================================================== */
+
+.spinner{
+
+    width:40px;
+
+    height:40px;
+
+    border:4px solid var(--border);
+
+    border-top-color:var(--primary-600);
+
+    border-radius:50%;
+
+    animation:rotate .8s linear infinite;
+
+}
+
+/* ==========================================================
+   SKELETON
+========================================================== */
+
+.skeleton{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:var(--surface-alt);
+
+}
+
+.skeleton::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    transform:translateX(-100%);
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    animation:skeleton 1.5s infinite;
+
+}
+
+@keyframes skeleton{
+
+    100%{
+
+        transform:translateX(100%);
+
+    }
+
+}
+
+/* ==========================================================
+   HOVER EFFECTS
+========================================================== */
+
+.hover-lift{
+
+    transition:transform .25s ease;
+
+}
+
+.hover-lift:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.hover-grow{
+
+    transition:transform .25s ease;
+
+}
+
+.hover-grow:hover{
+
+    transform:scale(1.04);
+
+}
+
+.hover-shrink{
+
+    transition:transform .25s ease;
+
+}
+
+.hover-shrink:hover{
+
+    transform:scale(.97);
+
+}
+
+.hover-rotate{
+
+    transition:transform .3s ease;
+
+}
+
+.hover-rotate:hover{
+
+    transform:rotate(3deg);
+
+}
+
+/* ==========================================================
+   RIPPLE
+========================================================== */
+
+.ripple{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.ripple::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:0;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.35);
+
+    transform:translate(-50%,-50%);
+
+    left:50%;
+
+    top:50%;
+
+    transition:width .45s,height .45s;
+
+}
+
+.ripple:active::after{
+
+    width:300px;
+
+    height:300px;
+
+}
+
+/* ==========================================================
+   STAGGER
+========================================================== */
+
+.delay-100{
+
+    animation-delay:.1s;
+
+}
+
+.delay-200{
+
+    animation-delay:.2s;
+
+}
+
+.delay-300{
+
+    animation-delay:.3s;
+
+}
+
+.delay-400{
+
+    animation-delay:.4s;
+
+}
+
+.delay-500{
+
+    animation-delay:.5s;
+
+}
+
+/* ==========================================================
+   DURATION
+========================================================== */
+
+.duration-fast{
+
+    animation-duration:.2s;
+
+}
+
+.duration-normal{
+
+    animation-duration:.4s;
+
+}
+
+.duration-slow{
+
+    animation-duration:.8s;
+
+}
+
+/* ==========================================================
+   SCROLL REVEAL
+========================================================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:
+
+        opacity .6s ease,
+
+        transform .6s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+/* ==========================================================
+   MODAL
+========================================================== */
+
+.modal-enter{
+
+    animation:modalEnter .35s ease forwards;
+
+}
+
+@keyframes modalEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px) scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+/* ==========================================================
+   DROPDOWN
+========================================================== */
+
+.dropdown-enter{
+
+    animation:dropdownEnter .25s ease;
+
+}
+
+@keyframes dropdownEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+/* ==========================================================
+   ACCESSIBILITY
+========================================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}

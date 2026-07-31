@@ -1,0 +1,367 @@
+/* ==========================================================
+   LIVRO.CODE
+   Sidebar CSS
+   Versão: 1.0
+========================================================== */
+
+/* ==========================================================
+   SIDEBAR
+========================================================== */
+
+.sidebar{
+
+    position:sticky;
+
+    top:var(--header-height);
+
+    left:0;
+
+    width:var(--sidebar-width);
+
+    height:calc(100vh - var(--header-height));
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    background:var(--surface);
+
+    border-right:1px solid var(--border);
+
+    padding:var(--space-6);
+
+    transition:all var(--transition-normal);
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.sidebar__header{
+
+    margin-bottom:var(--space-8);
+
+}
+
+.sidebar__header h2{
+
+    margin:0;
+
+    font-size:1.1rem;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   NAV
+========================================================== */
+
+.sidebar__nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-4);
+
+}
+
+/* ==========================================================
+   GROUP
+========================================================== */
+
+.sidebar__group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-2);
+
+}
+
+/* ==========================================================
+   GROUP BUTTON
+========================================================== */
+
+.sidebar__group-title{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px 14px;
+
+    border-radius:var(--radius-md);
+
+    background:transparent;
+
+    color:var(--text);
+
+    font-weight:600;
+
+    transition:all .25s;
+
+}
+
+.sidebar__group-title:hover{
+
+    background:var(--surface-hover);
+
+}
+
+/* ==========================================================
+   LIST
+========================================================== */
+
+.sidebar__list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+
+    padding-left:12px;
+
+}
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+.sidebar__list a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 14px;
+
+    border-radius:var(--radius-sm);
+
+    color:var(--text-secondary);
+
+    transition:all .20s;
+
+}
+
+.sidebar__list a:hover{
+
+    background:var(--surface-hover);
+
+    color:var(--primary-600);
+
+}
+
+/* ==========================================================
+   ACTIVE
+========================================================== */
+
+.sidebar__list a.active{
+
+    background:var(--primary-50);
+
+    color:var(--primary-700);
+
+    font-weight:600;
+
+    border-left:4px solid var(--primary-600);
+
+}
+
+/* ==========================================================
+   ICON
+========================================================== */
+
+.sidebar__icon{
+
+    width:18px;
+
+    height:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+/* ==========================================================
+   COLLAPSED
+========================================================== */
+
+.sidebar--collapsed{
+
+    width:var(--sidebar-collapsed);
+
+}
+
+.sidebar--collapsed .sidebar__header h2,
+
+.sidebar--collapsed .sidebar__group-title span,
+
+.sidebar--collapsed .sidebar__list span{
+
+    display:none;
+
+}
+
+.sidebar--collapsed .sidebar__group-title{
+
+    justify-content:center;
+
+}
+
+.sidebar--collapsed .sidebar__list a{
+
+    justify-content:center;
+
+    padding:12px;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.sidebar__footer{
+
+    margin-top:auto;
+
+    padding-top:var(--space-8);
+
+    border-top:1px solid var(--border);
+
+}
+
+/* ==========================================================
+   PROGRESS
+========================================================== */
+
+.sidebar__progress{
+
+    margin-top:var(--space-6);
+
+}
+
+.sidebar__progress-title{
+
+    font-size:.85rem;
+
+    margin-bottom:8px;
+
+    color:var(--text-muted);
+
+}
+
+.sidebar__progress-bar{
+
+    width:100%;
+
+    height:8px;
+
+    border-radius:999px;
+
+    background:var(--surface-hover);
+
+    overflow:hidden;
+
+}
+
+.sidebar__progress-fill{
+
+    width:0;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary-500),
+        var(--secondary-500)
+    );
+
+    transition:width .4s;
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+.sidebar::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+
+    background:var(--gray-300);
+
+    border-radius:999px;
+
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover{
+
+    background:var(--gray-400);
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:1024px){
+
+    .sidebar{
+
+        position:fixed;
+
+        top:var(--header-height);
+
+        left:-100%;
+
+        z-index:var(--z-sidebar);
+
+        box-shadow:var(--shadow-xl);
+
+    }
+
+    .sidebar.sidebar--open{
+
+        left:0;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .sidebar{
+
+        width:280px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .sidebar{
+
+        width:100%;
+
+    }
+
+}

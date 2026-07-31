@@ -1,0 +1,403 @@
+/* ==========================================================
+   LIVRO.CODE
+   Alerts CSS
+   Sistema de Alertas
+   Versão: 1.0
+========================================================== */
+
+/* ==========================================================
+   ALERT BASE
+========================================================== */
+
+.alert{
+
+    display:flex;
+    align-items:flex-start;
+    gap:var(--space-4);
+
+    width:100%;
+
+    margin:var(--space-8) 0;
+    padding:var(--space-6);
+
+    border:1px solid transparent;
+    border-left:6px solid;
+
+    border-radius:var(--radius-lg);
+
+    background:var(--surface);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+/* ==========================================================
+   ICON
+========================================================== */
+
+.alert-icon{
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    font-size:1.2rem;
+
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.alert-content{
+
+    flex:1;
+
+}
+
+.alert-title{
+
+    margin:0 0 var(--space-2);
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+.alert-text{
+
+    margin:0;
+
+    color:var(--text-secondary);
+
+    line-height:1.7;
+
+}
+
+.alert-text p:last-child{
+
+    margin-bottom:0;
+
+}
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+.alert a{
+
+    font-weight:600;
+
+    text-decoration:underline;
+
+}
+
+/* ==========================================================
+   INFO
+========================================================== */
+
+.alert-info{
+
+    background:var(--info-50);
+
+    border-color:var(--info-500);
+
+}
+
+.alert-info .alert-icon{
+
+    background:var(--info-100);
+
+    color:var(--info-600);
+
+}
+
+/* ==========================================================
+   SUCCESS
+========================================================== */
+
+.alert-success{
+
+    background:var(--success-50);
+
+    border-color:var(--success-600);
+
+}
+
+.alert-success .alert-icon{
+
+    background:var(--success-100);
+
+    color:var(--success-600);
+
+}
+
+/* ==========================================================
+   WARNING
+========================================================== */
+
+.alert-warning{
+
+    background:var(--warning-50);
+
+    border-color:var(--warning-500);
+
+}
+
+.alert-warning .alert-icon{
+
+    background:var(--warning-100);
+
+    color:var(--warning-700);
+
+}
+
+/* ==========================================================
+   DANGER
+========================================================== */
+
+.alert-danger{
+
+    background:var(--danger-50);
+
+    border-color:var(--danger-600);
+
+}
+
+.alert-danger .alert-icon{
+
+    background:var(--danger-100);
+
+    color:var(--danger-600);
+
+}
+
+/* ==========================================================
+   TIP
+========================================================== */
+
+.alert-tip{
+
+    background:var(--primary-50);
+
+    border-color:var(--primary-600);
+
+}
+
+.alert-tip .alert-icon{
+
+    background:var(--primary-100);
+
+    color:var(--primary-700);
+
+}
+
+/* ==========================================================
+   PROJECT
+========================================================== */
+
+.alert-project{
+
+    background:var(--secondary-50);
+
+    border-color:var(--secondary-600);
+
+}
+
+.alert-project .alert-icon{
+
+    background:var(--secondary-100);
+
+    color:var(--secondary-700);
+
+}
+
+/* ==========================================================
+   CURIOSITY
+========================================================== */
+
+.alert-curiosity{
+
+    background:#FFF7ED;
+
+    border-color:#EA580C;
+
+}
+
+.alert-curiosity .alert-icon{
+
+    background:#FFEDD5;
+
+    color:#C2410C;
+
+}
+
+/* ==========================================================
+   QUESTION
+========================================================== */
+
+.alert-question{
+
+    background:#F5F3FF;
+
+    border-color:#7C3AED;
+
+}
+
+.alert-question .alert-icon{
+
+    background:#EDE9FE;
+
+    color:#6D28D9;
+
+}
+
+/* ==========================================================
+   BEST PRACTICE
+========================================================== */
+
+.alert-best{
+
+    background:#F0FDF4;
+
+    border-color:#16A34A;
+
+}
+
+.alert-best .alert-icon{
+
+    background:#DCFCE7;
+
+    color:#15803D;
+
+}
+
+/* ==========================================================
+   NOTE
+========================================================== */
+
+.alert-note{
+
+    background:var(--surface-alt);
+
+    border-color:var(--gray-400);
+
+}
+
+.alert-note .alert-icon{
+
+    background:var(--gray-200);
+
+    color:var(--gray-700);
+
+}
+
+/* ==========================================================
+   COMPACT
+========================================================== */
+
+.alert-sm{
+
+    padding:var(--space-4);
+
+}
+
+.alert-sm .alert-icon{
+
+    width:34px;
+    height:34px;
+
+    font-size:1rem;
+
+}
+
+/* ==========================================================
+   LARGE
+========================================================== */
+
+.alert-lg{
+
+    padding:var(--space-8);
+
+}
+
+.alert-lg .alert-icon{
+
+    width:56px;
+    height:56px;
+
+    font-size:1.5rem;
+
+}
+
+/* ==========================================================
+   DISMISSIBLE
+========================================================== */
+
+.alert-dismissible{
+
+    position:relative;
+
+    padding-right:60px;
+
+}
+
+.alert-close{
+
+    position:absolute;
+
+    top:18px;
+    right:18px;
+
+    width:32px;
+    height:32px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    transition:background .2s;
+
+}
+
+.alert-close:hover{
+
+    background:rgba(0,0,0,.08);
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:768px){
+
+    .alert{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .alert-icon{
+
+        margin-bottom:var(--space-2);
+
+    }
+
+}

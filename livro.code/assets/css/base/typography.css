@@ -1,0 +1,554 @@
+/* ==========================================================
+   LIVRO.CODE
+   Typography CSS
+   Sistema Tipográfico
+   Versão: 1.0
+========================================================== */
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--text-base);
+    font-weight: var(--font-normal);
+    line-height: var(--leading-normal);
+
+    color: var(--text);
+    background: var(--background);
+
+    text-rendering: optimizeLegibility;
+}
+
+/* ==========================================================
+   HEADINGS
+========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    color: var(--text);
+
+    font-weight: var(--font-bold);
+
+    line-height: var(--leading-tight);
+
+    margin-top: var(--space-10);
+
+    margin-bottom: var(--space-5);
+
+}
+
+h1{
+    font-size: var(--text-5xl);
+}
+
+h2{
+    font-size: var(--text-4xl);
+}
+
+h3{
+    font-size: var(--text-3xl);
+}
+
+h4{
+    font-size: var(--text-2xl);
+}
+
+h5{
+    font-size: var(--text-xl);
+}
+
+h6{
+    font-size: var(--text-lg);
+}
+
+/* ==========================================================
+   PARAGRAPHS
+========================================================== */
+
+p{
+
+    margin-bottom: var(--space-5);
+
+    color: var(--text-secondary);
+
+    line-height: var(--leading-relaxed);
+
+}
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+a{
+
+    color: var(--primary-600);
+
+    text-decoration: none;
+
+    transition: color var(--transition-fast);
+
+}
+
+a:hover{
+
+    color: var(--primary-700);
+
+}
+
+a:focus-visible{
+
+    color: var(--primary-700);
+
+}
+
+/* ==========================================================
+   STRONG
+========================================================== */
+
+strong{
+
+    font-weight: var(--font-bold);
+
+    color: var(--text);
+
+}
+
+/* ==========================================================
+   EMPHASIS
+========================================================== */
+
+em{
+
+    font-style: italic;
+
+}
+
+/* ==========================================================
+   SMALL
+========================================================== */
+
+small{
+
+    font-size: var(--text-sm);
+
+    color: var(--text-muted);
+
+}
+
+/* ==========================================================
+   MARK
+========================================================== */
+
+mark{
+
+    background: var(--warning-200);
+
+    color: var(--text);
+
+    padding: 2px 4px;
+
+    border-radius: var(--radius-xs);
+
+}
+
+/* ==========================================================
+   LISTS
+========================================================== */
+
+ul,
+ol{
+
+    margin-bottom: var(--space-6);
+
+    padding-left: var(--space-8);
+
+}
+
+ul{
+
+    list-style: disc;
+
+}
+
+ol{
+
+    list-style: decimal;
+
+}
+
+li{
+
+    margin-bottom: var(--space-2);
+
+    color: var(--text-secondary);
+
+}
+
+/* ==========================================================
+   DESCRIPTION LIST
+========================================================== */
+
+dl{
+
+    margin-bottom: var(--space-6);
+
+}
+
+dt{
+
+    font-weight: var(--font-semibold);
+
+    margin-top: var(--space-4);
+
+}
+
+dd{
+
+    margin-left: var(--space-6);
+
+    color: var(--text-secondary);
+
+}
+
+/* ==========================================================
+   BLOCKQUOTE
+========================================================== */
+
+blockquote{
+
+    margin: var(--space-8) 0;
+
+    padding: var(--space-5);
+
+    border-left: 5px solid var(--primary-600);
+
+    background: var(--surface-alt);
+
+    border-radius: var(--radius-md);
+
+    color: var(--text-secondary);
+
+    font-style: italic;
+
+}
+
+/* ==========================================================
+   HORIZONTAL RULE
+========================================================== */
+
+hr{
+
+    height:1px;
+
+    background: var(--border);
+
+    margin: var(--space-10) 0;
+
+}
+
+/* ==========================================================
+   INLINE CODE
+========================================================== */
+
+code{
+
+    font-family: var(--font-code);
+
+    font-size: .92em;
+
+    background: var(--surface-alt);
+
+    color: var(--danger-600);
+
+    padding:2px 6px;
+
+    border-radius: var(--radius-xs);
+
+}
+
+/* ==========================================================
+   PRE
+========================================================== */
+
+pre{
+
+    margin: var(--space-6) 0;
+
+    padding: var(--space-6);
+
+    background: var(--code-bg);
+
+    color: var(--code-text);
+
+    border-radius: var(--radius-lg);
+
+    overflow-x:auto;
+
+    border:1px solid var(--code-border);
+
+}
+
+pre code{
+
+    background:none;
+
+    color:inherit;
+
+    padding:0;
+
+}
+
+/* ==========================================================
+   KEYBOARD
+========================================================== */
+
+kbd{
+
+    font-family: var(--font-code);
+
+    background: var(--surface-alt);
+
+    border:1px solid var(--border);
+
+    border-bottom-width:3px;
+
+    padding:3px 8px;
+
+    border-radius: var(--radius-sm);
+
+}
+
+/* ==========================================================
+   TABLE CAPTION
+========================================================== */
+
+caption{
+
+    padding-bottom: var(--space-3);
+
+    font-weight: var(--font-semibold);
+
+    color: var(--text);
+
+}
+
+/* ==========================================================
+   UTILITIES
+========================================================== */
+
+.text-left{
+    text-align:left;
+}
+
+.text-center{
+    text-align:center;
+}
+
+.text-right{
+    text-align:right;
+}
+
+.text-justify{
+    text-align:justify;
+}
+
+/* ==========================================================
+   COLORS
+========================================================== */
+
+.text-primary{
+    color:var(--primary-600);
+}
+
+.text-secondary{
+    color:var(--text-secondary);
+}
+
+.text-success{
+    color:var(--success-600);
+}
+
+.text-warning{
+    color:var(--warning-600);
+}
+
+.text-danger{
+    color:var(--danger-600);
+}
+
+.text-info{
+    color:var(--info-600);
+}
+
+.text-muted{
+    color:var(--text-muted);
+}
+
+/* ==========================================================
+   WEIGHT
+========================================================== */
+
+.font-light{
+    font-weight:var(--font-light);
+}
+
+.font-normal{
+    font-weight:var(--font-normal);
+}
+
+.font-medium{
+    font-weight:var(--font-medium);
+}
+
+.font-semibold{
+    font-weight:var(--font-semibold);
+}
+
+.font-bold{
+    font-weight:var(--font-bold);
+}
+
+.font-black{
+    font-weight:var(--font-black);
+}
+
+/* ==========================================================
+   SIZE
+========================================================== */
+
+.text-xs{
+    font-size:var(--text-xs);
+}
+
+.text-sm{
+    font-size:var(--text-sm);
+}
+
+.text-base{
+    font-size:var(--text-base);
+}
+
+.text-lg{
+    font-size:var(--text-lg);
+}
+
+.text-xl{
+    font-size:var(--text-xl);
+}
+
+.text-2xl{
+    font-size:var(--text-2xl);
+}
+
+.text-3xl{
+    font-size:var(--text-3xl);
+}
+
+.text-4xl{
+    font-size:var(--text-4xl);
+}
+
+.text-5xl{
+    font-size:var(--text-5xl);
+}
+
+/* ==========================================================
+   LINE HEIGHT
+========================================================== */
+
+.leading-tight{
+    line-height:var(--leading-tight);
+}
+
+.leading-normal{
+    line-height:var(--leading-normal);
+}
+
+.leading-relaxed{
+    line-height:var(--leading-relaxed);
+}
+
+/* ==========================================================
+   TEXT TRANSFORM
+========================================================== */
+
+.uppercase{
+    text-transform:uppercase;
+}
+
+.lowercase{
+    text-transform:lowercase;
+}
+
+.capitalize{
+    text-transform:capitalize;
+}
+
+/* ==========================================================
+   TEXT DECORATION
+========================================================== */
+
+.underline{
+    text-decoration:underline;
+}
+
+.line-through{
+    text-decoration:line-through;
+}
+
+.no-underline{
+    text-decoration:none;
+}
+
+/* ==========================================================
+   SELECTION
+========================================================== */
+
+::selection{
+
+    background:var(--primary-200);
+
+    color:var(--gray-900);
+
+}
+
+/* ==========================================================
+   ARTICLE
+========================================================== */
+
+article{
+
+    max-width:900px;
+
+}
+
+article h1:first-child{
+
+    margin-top:0;
+
+}
+
+article img{
+
+    margin: var(--space-8) auto;
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-md);
+
+}
+
+article p + h2,
+article p + h3,
+article p + h4{
+
+    margin-top: var(--space-12);
+
+}

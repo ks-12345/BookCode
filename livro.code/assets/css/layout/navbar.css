@@ -1,0 +1,376 @@
+/* ==========================================================
+   LIVRO.CODE
+   Navbar CSS
+   Versão: 1.0
+========================================================== */
+
+/* ==========================================================
+   NAVBAR
+========================================================== */
+
+.navbar{
+
+    position:sticky;
+    top:0;
+    left:0;
+    right:0;
+
+    z-index:var(--z-navbar);
+
+    height:var(--header-height);
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 var(--space-8);
+
+    background:var(--surface);
+
+    border-bottom:1px solid var(--border);
+
+    backdrop-filter:blur(12px);
+
+}
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.navbar__logo{
+
+    display:flex;
+    align-items:center;
+    gap:var(--space-3);
+
+    flex-shrink:0;
+
+}
+
+.navbar__logo img{
+
+    width:42px;
+    height:42px;
+    object-fit:contain;
+
+}
+
+.navbar__logo span{
+
+    font-size:1.25rem;
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+/* ==========================================================
+   SEARCH
+========================================================== */
+
+.navbar__search{
+
+    flex:1;
+
+    max-width:550px;
+
+    margin-inline:var(--space-8);
+
+}
+
+.navbar__search input{
+
+    width:100%;
+
+    height:46px;
+
+    padding-inline:18px;
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius-full);
+
+    background:var(--surface-alt);
+
+    color:var(--text);
+
+    transition:all var(--transition-fast);
+
+}
+
+.navbar__search input::placeholder{
+
+    color:var(--text-muted);
+
+}
+
+.navbar__search input:hover{
+
+    border-color:var(--primary-300);
+
+}
+
+.navbar__search input:focus{
+
+    border-color:var(--primary-600);
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+/* ==========================================================
+   MENU
+========================================================== */
+
+.navbar__menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--space-6);
+
+}
+
+.navbar__menu a{
+
+    position:relative;
+
+    color:var(--text-secondary);
+
+    font-weight:500;
+
+    transition:all var(--transition-fast);
+
+}
+
+.navbar__menu a:hover{
+
+    color:var(--primary-600);
+
+}
+
+.navbar__menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary-600);
+
+    transition:width .25s;
+
+}
+
+.navbar__menu a:hover::after{
+
+    width:100%;
+
+}
+
+/* ==========================================================
+   ACTIONS
+========================================================== */
+
+.navbar__actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--space-3);
+
+    margin-left:var(--space-6);
+
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.navbar button{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    transition:all .25s;
+
+    background:transparent;
+
+}
+
+.navbar button:hover{
+
+    background:var(--surface-hover);
+
+}
+
+/* ==========================================================
+   USER AVATAR
+========================================================== */
+
+.navbar__avatar{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+}
+
+.navbar__avatar img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+/* ==========================================================
+   MOBILE MENU BUTTON
+========================================================== */
+
+.navbar__toggle{
+
+    display:none;
+
+    width:42px;
+
+    height:42px;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ==========================================================
+   DIVIDER
+========================================================== */
+
+.navbar__divider{
+
+    width:1px;
+
+    height:32px;
+
+    background:var(--border);
+
+}
+
+/* ==========================================================
+   BADGE
+========================================================== */
+
+.navbar__badge{
+
+    position:absolute;
+
+    top:-4px;
+
+    right:-4px;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:var(--danger-500);
+
+    color:white;
+
+    font-size:.70rem;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:1024px){
+
+    .navbar{
+
+        padding-inline:var(--space-5);
+
+    }
+
+    .navbar__menu{
+
+        display:none;
+
+    }
+
+    .navbar__toggle{
+
+        display:flex;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .navbar{
+
+        padding-inline:var(--space-4);
+
+    }
+
+    .navbar__search{
+
+        display:none;
+
+    }
+
+    .navbar__logo span{
+
+        display:none;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .navbar{
+
+        height:64px;
+
+    }
+
+    .navbar__actions{
+
+        gap:var(--space-2);
+
+    }
+
+}

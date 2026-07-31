@@ -1,0 +1,470 @@
+/* ==========================================================
+   LIVRO.CODE
+   Search CSS
+   Sistema de Pesquisa
+   Versão: 1.0
+========================================================== */
+
+/* ==========================================================
+   SEARCH CONTAINER
+========================================================== */
+
+.search{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:700px;
+
+    margin-inline:auto;
+
+}
+
+/* ==========================================================
+   SEARCH INPUT
+========================================================== */
+
+.search-input{
+
+    width:100%;
+
+    height:52px;
+
+    padding:0 56px 0 52px;
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius-full);
+
+    background:var(--surface);
+
+    color:var(--text);
+
+    font-size:1rem;
+
+    transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast);
+
+}
+
+.search-input::placeholder{
+
+    color:var(--text-muted);
+
+}
+
+.search-input:focus{
+
+    outline:none;
+
+    border-color:var(--primary-600);
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+/* ==========================================================
+   SEARCH ICON
+========================================================== */
+
+.search-icon{
+
+    position:absolute;
+
+    left:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:var(--text-muted);
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   CLEAR BUTTON
+========================================================== */
+
+.search-clear{
+
+    position:absolute;
+
+    right:14px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:34px;
+
+    height:34px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:transparent;
+
+    cursor:pointer;
+
+    transition:background .2s;
+
+}
+
+.search-clear:hover{
+
+    background:var(--surface-hover);
+
+}
+
+/* ==========================================================
+   SHORTCUT
+========================================================== */
+
+.search-shortcut{
+
+    position:absolute;
+
+    right:56px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    padding:4px 8px;
+
+    border-radius:var(--radius-sm);
+
+    background:var(--surface-alt);
+
+    border:1px solid var(--border);
+
+    color:var(--text-muted);
+
+    font-size:.75rem;
+
+    font-family:var(--font-code);
+
+}
+
+/* ==========================================================
+   RESULTS
+========================================================== */
+
+.search-results{
+
+    position:absolute;
+
+    top:calc(100% + 10px);
+
+    left:0;
+
+    width:100%;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius-lg);
+
+    box-shadow:var(--shadow-xl);
+
+    overflow:hidden;
+
+    z-index:var(--z-dropdown);
+
+    max-height:450px;
+
+    overflow-y:auto;
+
+}
+
+/* ==========================================================
+   RESULT ITEM
+========================================================== */
+
+.search-result{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    padding:16px 20px;
+
+    cursor:pointer;
+
+    transition:background .2s;
+
+}
+
+.search-result:hover{
+
+    background:var(--surface-hover);
+
+}
+
+.search-result.active{
+
+    background:var(--primary-50);
+
+}
+
+/* ==========================================================
+   RESULT TITLE
+========================================================== */
+
+.search-result-title{
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+/* ==========================================================
+   RESULT DESCRIPTION
+========================================================== */
+
+.search-result-description{
+
+    font-size:.90rem;
+
+    color:var(--text-secondary);
+
+    line-height:1.5;
+
+}
+
+/* ==========================================================
+   HIGHLIGHT
+========================================================== */
+
+.search-highlight{
+
+    background:#FEF3C7;
+
+    color:#92400E;
+
+    padding:2px 4px;
+
+    border-radius:4px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+   RESULT CATEGORY
+========================================================== */
+
+.search-category{
+
+    font-size:.75rem;
+
+    color:var(--primary-600);
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.05em;
+
+}
+
+/* ==========================================================
+   EMPTY
+========================================================== */
+
+.search-empty{
+
+    padding:32px;
+
+    text-align:center;
+
+    color:var(--text-muted);
+
+}
+
+/* ==========================================================
+   HISTORY
+========================================================== */
+
+.search-history{
+
+    padding:20px;
+
+}
+
+.search-history-title{
+
+    margin-bottom:16px;
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    color:var(--text-muted);
+
+}
+
+.search-history-list{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+.search-history-item{
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:var(--surface-alt);
+
+    cursor:pointer;
+
+    transition:all .2s;
+
+}
+
+.search-history-item:hover{
+
+    background:var(--primary-100);
+
+    color:var(--primary-700);
+
+}
+
+/* ==========================================================
+   LOADING
+========================================================== */
+
+.search-loading{
+
+    padding:32px;
+
+    text-align:center;
+
+}
+
+.search-spinner{
+
+    width:26px;
+
+    height:26px;
+
+    margin:auto;
+
+    border:3px solid var(--border);
+
+    border-top-color:var(--primary-600);
+
+    border-radius:50%;
+
+    animation:search-spin .8s linear infinite;
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+.search-results::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.search-results::-webkit-scrollbar-thumb{
+
+    background:var(--gray-300);
+
+    border-radius:999px;
+
+}
+
+.search-results::-webkit-scrollbar-thumb:hover{
+
+    background:var(--gray-400);
+
+}
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
+
+@keyframes search-spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:768px){
+
+    .search{
+
+        max-width:100%;
+
+    }
+
+    .search-shortcut{
+
+        display:none;
+
+    }
+
+    .search-results{
+
+        max-height:60vh;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .search-input{
+
+        height:48px;
+
+        font-size:.95rem;
+
+    }
+
+    .search-result{
+
+        padding:14px 16px;
+
+    }
+
+}

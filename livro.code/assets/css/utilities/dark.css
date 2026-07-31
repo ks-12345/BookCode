@@ -1,0 +1,358 @@
+/* ==========================================================
+   LIVRO.CODE
+   Dark Theme
+   Sistema de Temas
+   Versão: 1.0
+========================================================== */
+
+/* ==========================================================
+   DARK THEME
+========================================================== */
+
+html[data-theme="dark"]{
+
+    color-scheme:dark;
+
+    /* Backgrounds */
+
+    --background:#0F172A;
+    --surface:#111827;
+    --surface-alt:#1E293B;
+    --surface-hover:#273449;
+
+    /* Text */
+
+    --text:#F8FAFC;
+    --text-secondary:#CBD5E1;
+    --text-muted:#94A3B8;
+
+    /* Borders */
+
+    --border:#334155;
+
+    /* Brand */
+
+    --primary-50:#172554;
+    --primary-100:#1E3A8A;
+    --primary-200:#1D4ED8;
+    --primary-300:#2563EB;
+    --primary-400:#3B82F6;
+    --primary-500:#60A5FA;
+    --primary-600:#93C5FD;
+    --primary-700:#BFDBFE;
+
+    /* Code */
+
+    --code-bg:#020617;
+    --code-border:#1E293B;
+    --code-text:#E2E8F0;
+
+    /* Gray */
+
+    --gray-100:#1E293B;
+    --gray-200:#334155;
+    --gray-300:#475569;
+    --gray-400:#64748B;
+    --gray-500:#94A3B8;
+    --gray-600:#CBD5E1;
+
+    /* Shadow */
+
+    --shadow-color:rgba(0,0,0,.45);
+
+}
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+html[data-theme="dark"] body{
+
+    background:var(--background);
+
+    color:var(--text);
+
+}
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+html[data-theme="dark"] a{
+
+    color:var(--primary-500);
+
+}
+
+html[data-theme="dark"] a:hover{
+
+    color:var(--primary-600);
+
+}
+
+/* ==========================================================
+   NAVBAR
+========================================================== */
+
+html[data-theme="dark"] .navbar{
+
+    background:rgba(15,23,42,.95);
+
+    border-bottom:1px solid var(--border);
+
+    backdrop-filter:blur(20px);
+
+}
+
+/* ==========================================================
+   SIDEBAR
+========================================================== */
+
+html[data-theme="dark"] .sidebar{
+
+    background:var(--surface);
+
+    border-right:1px solid var(--border);
+
+}
+
+html[data-theme="dark"] .sidebar a{
+
+    color:var(--text-secondary);
+
+}
+
+html[data-theme="dark"] .sidebar a:hover{
+
+    background:var(--surface-hover);
+
+    color:var(--text);
+
+}
+
+/* ==========================================================
+   CARDS
+========================================================== */
+
+html[data-theme="dark"] .card{
+
+    background:var(--surface);
+
+    border-color:var(--border);
+
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+html[data-theme="dark"] .btn-secondary{
+
+    background:var(--surface-alt);
+
+    color:var(--text);
+
+    border:1px solid var(--border);
+
+}
+
+html[data-theme="dark"] .btn-secondary:hover{
+
+    background:var(--surface-hover);
+
+}
+
+/* ==========================================================
+   FORMS
+========================================================== */
+
+html[data-theme="dark"] .form-input,
+html[data-theme="dark"] .form-select,
+html[data-theme="dark"] .form-textarea{
+
+    background:var(--surface);
+
+    border-color:var(--border);
+
+    color:var(--text);
+
+}
+
+html[data-theme="dark"] .form-input::placeholder{
+
+    color:var(--text-muted);
+
+}
+
+/* ==========================================================
+   TABLES
+========================================================== */
+
+html[data-theme="dark"] .table{
+
+    background:var(--surface);
+
+}
+
+html[data-theme="dark"] .table thead{
+
+    background:#1D4ED8;
+
+}
+
+html[data-theme="dark"] .table td{
+
+    border-color:var(--border);
+
+}
+
+/* ==========================================================
+   CODE
+========================================================== */
+
+html[data-theme="dark"] .code-block{
+
+    background:var(--code-bg);
+
+    border-color:var(--code-border);
+
+}
+
+html[data-theme="dark"] .code-header{
+
+    background:#020617;
+
+}
+
+/* ==========================================================
+   SEARCH
+========================================================== */
+
+html[data-theme="dark"] .search-results{
+
+    background:var(--surface);
+
+    border-color:var(--border);
+
+}
+
+/* ==========================================================
+   ALERTS
+========================================================== */
+
+html[data-theme="dark"] .alert{
+
+    box-shadow:none;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+html[data-theme="dark"] .footer{
+
+    background:#020617;
+
+    border-top:1px solid var(--border);
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+html[data-theme="dark"] ::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+html[data-theme="dark"] ::-webkit-scrollbar-thumb{
+
+    background:#475569;
+
+}
+
+html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover{
+
+    background:#64748B;
+
+}
+
+/* ==========================================================
+   IMAGES
+========================================================== */
+
+html[data-theme="dark"] img{
+
+    opacity:.96;
+
+}
+
+/* ==========================================================
+   SELECTION
+========================================================== */
+
+html[data-theme="dark"] ::selection{
+
+    background:#2563EB;
+
+    color:white;
+
+}
+
+/* ==========================================================
+   FOCUS
+========================================================== */
+
+html[data-theme="dark"] :focus-visible{
+
+    outline:2px solid var(--primary-500);
+
+    outline-offset:2px;
+
+}
+
+/* ==========================================================
+   TRANSITIONS
+========================================================== */
+
+html,
+body,
+.navbar,
+.sidebar,
+.card,
+.table,
+.code-block,
+.footer,
+button,
+input,
+textarea,
+select{
+
+    transition:
+
+        background-color .25s ease,
+
+        color .25s ease,
+
+        border-color .25s ease,
+
+        box-shadow .25s ease;
+
+}
+
+/* ==========================================================
+   SYSTEM THEME
+========================================================== */
+
+@media (prefers-color-scheme:dark){
+
+    html:not([data-theme]){
+
+        color-scheme:dark;
+
+    }
+
+}

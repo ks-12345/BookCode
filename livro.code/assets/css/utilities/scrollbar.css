@@ -1,0 +1,413 @@
+/* ==========================================================
+   LIVRO.CODE
+   Scrollbar CSS
+   Sistema Global de Barras de Rolagem
+   Versão: 1.0
+========================================================== */
+
+/* ==========================================================
+   FIREFOX
+========================================================== */
+
+*{
+
+    scrollbar-width:thin;
+
+    scrollbar-color:
+        var(--gray-400)
+        transparent;
+
+}
+
+/* ==========================================================
+   GLOBAL
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+    height:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--gray-400);
+
+    border-radius:999px;
+
+    border:2px solid transparent;
+
+    background-clip:padding-box;
+
+    transition:background .25s;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--gray-500);
+
+}
+
+::-webkit-scrollbar-corner{
+
+    background:transparent;
+
+}
+
+/* ==========================================================
+   THIN SCROLLBAR
+========================================================== */
+
+.scrollbar-thin::-webkit-scrollbar{
+
+    width:6px;
+
+    height:6px;
+
+}
+
+.scrollbar-thin{
+
+    scrollbar-width:thin;
+
+}
+
+/* ==========================================================
+   LARGE SCROLLBAR
+========================================================== */
+
+.scrollbar-lg::-webkit-scrollbar{
+
+    width:14px;
+
+    height:14px;
+
+}
+
+/* ==========================================================
+   PRIMARY
+========================================================== */
+
+.scrollbar-primary::-webkit-scrollbar-thumb{
+
+    background:var(--primary-500);
+
+}
+
+.scrollbar-primary::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-600);
+
+}
+
+/* ==========================================================
+   DARK
+========================================================== */
+
+.scrollbar-dark::-webkit-scrollbar-track{
+
+    background:#0F172A;
+
+}
+
+.scrollbar-dark::-webkit-scrollbar-thumb{
+
+    background:#334155;
+
+}
+
+.scrollbar-dark::-webkit-scrollbar-thumb:hover{
+
+    background:#475569;
+
+}
+
+/* ==========================================================
+   SIDEBAR
+========================================================== */
+
+.sidebar{
+
+    scrollbar-width:thin;
+
+}
+
+.sidebar::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.sidebar::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+
+    background:var(--gray-300);
+
+    border-radius:999px;
+
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-500);
+
+}
+
+/* ==========================================================
+   CODE BLOCK
+========================================================== */
+
+.code-content{
+
+    scrollbar-width:thin;
+
+}
+
+.code-content::-webkit-scrollbar{
+
+    height:10px;
+
+}
+
+.code-content::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+.code-content::-webkit-scrollbar-thumb{
+
+    background:#475569;
+
+    border-radius:999px;
+
+}
+
+.code-content::-webkit-scrollbar-thumb:hover{
+
+    background:#64748B;
+
+}
+
+/* ==========================================================
+   TABLES
+========================================================== */
+
+.table-responsive::-webkit-scrollbar{
+
+    height:10px;
+
+}
+
+.table-responsive::-webkit-scrollbar-track{
+
+    background:var(--surface-alt);
+
+}
+
+.table-responsive::-webkit-scrollbar-thumb{
+
+    background:var(--gray-400);
+
+    border-radius:999px;
+
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-500);
+
+}
+
+/* ==========================================================
+   SEARCH
+========================================================== */
+
+.search-results{
+
+    scrollbar-width:thin;
+
+}
+
+.search-results::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.search-results::-webkit-scrollbar-thumb{
+
+    background:var(--gray-300);
+
+    border-radius:999px;
+
+}
+
+.search-results::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-500);
+
+}
+
+/* ==========================================================
+   MODAL
+========================================================== */
+
+.modal-body::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.modal-body::-webkit-scrollbar-thumb{
+
+    background:var(--gray-400);
+
+    border-radius:999px;
+
+}
+
+/* ==========================================================
+   HIDDEN
+========================================================== */
+
+.scrollbar-hidden{
+
+    scrollbar-width:none;
+
+    -ms-overflow-style:none;
+
+}
+
+.scrollbar-hidden::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+/* ==========================================================
+   SMOOTH SCROLL
+========================================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/* ==========================================================
+   SCROLL OFFSET
+========================================================== */
+
+section{
+
+    scroll-margin-top:
+        calc(var(--header-height) + 20px);
+
+}
+
+/* ==========================================================
+   SCROLL SNAP
+========================================================== */
+
+.scroll-snap-y{
+
+    scroll-snap-type:y mandatory;
+
+}
+
+.scroll-snap-x{
+
+    scroll-snap-type:x mandatory;
+
+}
+
+.scroll-snap-start{
+
+    scroll-snap-align:start;
+
+}
+
+.scroll-snap-center{
+
+    scroll-snap-align:center;
+
+}
+
+.scroll-snap-end{
+
+    scroll-snap-align:end;
+
+}
+
+/* ==========================================================
+   OVERFLOW HELPERS
+========================================================== */
+
+.overflow-auto{
+
+    overflow:auto;
+
+}
+
+.overflow-x-auto{
+
+    overflow-x:auto;
+
+}
+
+.overflow-y-auto{
+
+    overflow-y:auto;
+
+}
+
+.overflow-hidden{
+
+    overflow:hidden;
+
+}
+
+.overflow-scroll{
+
+    overflow:scroll;
+
+}
+
+/* ==========================================================
+   TOUCH DEVICES
+========================================================== */
+
+.touch-scroll{
+
+    -webkit-overflow-scrolling:touch;
+
+}
+
+/* ==========================================================
+   PRINT
+========================================================== */
+
+@media print{
+
+    ::-webkit-scrollbar{
+
+        display:none;
+
+    }
+
+}
