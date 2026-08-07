@@ -1,0 +1,53 @@
+.progress-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.75rem;
+
+    padding:1rem;
+
+    border-radius:12px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+}
+
+.progress-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.progress-bar{
+
+    width:100%;
+
+    height:10px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    background:var(--surface-hover);
+
+}
+
+.progress-fill{
+
+    width:0;
+
+    height:100%;
+
+    background:var(--primary);
+
+    transition:width .4s ease;
+
+}

@@ -1,83 +1,280 @@
+
 /* ==========================================================
    LIVRO.CODE
-   MAIN.CSS
-   Arquivo principal do Design System
-
-   Este arquivo centraliza todos os módulos CSS.
-   A ordem de importação é importante.
-
-   Versão: 1.0
-========================================================== */
+   Main Stylesheet
+   ----------------------------------------------------------
+   Arquivo principal de estilos
+   Importa todo o Design System da aplicação.
+   ========================================================== */
 
 /* ==========================================================
    BASE
-   Configurações fundamentais
-========================================================== */
+   ========================================================== */
 
 @import url("./base/reset.css");
-
 @import url("./base/variables.css");
-
 @import url("./base/typography.css");
 
 /* ==========================================================
    LAYOUT
-========================================================== */
+   ========================================================== */
 
 @import url("./layout/layout.css");
-
 @import url("./layout/navbar.css");
-
 @import url("./layout/sidebar.css");
-
 @import url("./layout/footer.css");
 
 /* ==========================================================
    COMPONENTS
-========================================================== */
+   ========================================================== */
 
 @import url("./components/buttons.css");
-
 @import url("./components/cards.css");
-
-@import url("./components/alerts.css");
-
-@import url("./components/code.css");
-
-@import url("./components/tables.css");
-
 @import url("./components/forms.css");
-
+@import url("./components/tables.css");
+@import url("./components/code.css");
+@import url("./components/code-copy.css");
+@import url("./components/alerts.css");
 @import url("./components/search.css");
+@import url("./components/progress.css");
+@import url("./components/toc.css");
 
-/* ==========================================================
-   UTILITIES
-========================================================== */
-
-@import url("./utilities/scrollbar.css");
-
-@import url("./utilities/animations.css");
-
-@import url("./utilities/responsive.css");
-
-@import url("./utilities/dark.css");
-
-/* ==========================================================
-   CUSTOM
-   Sobrescritas específicas do projeto
-========================================================== */
+/* Futuros componentes */
 
 /*
-Crie um arquivo chamado custom.css
-caso queira modificar algum componente
-sem alterar o Design System original.
-
-Exemplo:
-
-@import url("./custom.css");
-
+@import url("./components/breadcrumb.css");
+@import url("./components/loading.css");
+@import url("./components/modal.css");
+@import url("./components/dropdown.css");
+@import url("./components/tooltip.css");
+@import url("./components/pagination.css");
+@import url("./components/tabs.css");
+@import url("./components/accordion.css");
+@import url("./components/quiz.css");
+@import url("./components/exercise.css");
+@import url("./components/roadmap.css");
+@import url("./components/timeline.css");
+@import url("./components/challenge.css");
 */
 
 /* ==========================================================
-   END
-========================================================== */
+   UTILITIES
+   ========================================================== */
+
+@import url("./utilities/animations.css");
+@import url("./utilities/scrollbar.css");
+@import url("./utilities/responsive.css");
+@import url("./utilities/dark.css");
+
+/* ==========================================================
+   ESTILOS GLOBAIS
+   ========================================================== */
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    background: var(--background);
+
+    color: var(--text-primary);
+
+    font-family: var(--font-family);
+
+    font-size: var(--font-size-base);
+
+    line-height: 1.6;
+
+    transition:
+        background .25s ease,
+        color .25s ease;
+
+}
+
+/* ==========================================================
+   LINKS
+   ========================================================== */
+
+a {
+
+    color: var(--primary);
+
+    text-decoration: none;
+
+    transition: color .2s ease;
+
+}
+
+a:hover {
+
+    color: var(--primary-hover);
+
+}
+
+/* ==========================================================
+   IMAGENS
+   ========================================================== */
+
+img {
+
+    max-width: 100%;
+
+    height: auto;
+
+    display: block;
+
+}
+
+/* ==========================================================
+   MAIN
+   ========================================================== */
+
+main {
+
+    min-height: 100vh;
+
+    padding: 2rem;
+
+}
+
+/* ==========================================================
+   SELECTION
+   ========================================================== */
+
+::selection {
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+}
+
+/* ==========================================================
+   FOCUS
+   ========================================================== */
+
+:focus-visible {
+
+    outline: 2px solid var(--primary);
+
+    outline-offset: 2px;
+
+}
+
+/* ==========================================================
+   TRANSIÇÕES GLOBAIS
+   ========================================================== */
+
+* {
+
+    transition:
+
+        background-color .2s ease,
+
+        color .2s ease,
+
+        border-color .2s ease,
+
+        box-shadow .2s ease;
+
+}
+
+/* ==========================================================
+   CLASSES UTILITÁRIAS
+   ========================================================== */
+
+.hidden {
+
+    display: none !important;
+
+}
+
+.visible {
+
+    display: block !important;
+
+}
+
+.text-center {
+
+    text-align: center;
+
+}
+
+.text-left {
+
+    text-align: left;
+
+}
+
+.text-right {
+
+    text-align: right;
+
+}
+
+.mt-1 { margin-top: .5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: .5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+.p-1 { padding: .5rem; }
+.p-2 { padding: 1rem; }
+.p-3 { padding: 1.5rem; }
+.p-4 { padding: 2rem; }
+
+.flex {
+
+    display: flex;
+
+}
+
+.grid {
+
+    display: grid;
+
+}
+
+.flex-center {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.space-between {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.w-100 {
+
+    width: 100%;
+
+}
+
+.h-100 {
+
+    height: 100%;
+
+}
+
+/* ==========================================================
+   FIM DO ARQUIVO
+   ========================================================== */

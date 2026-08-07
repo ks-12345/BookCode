@@ -1,0 +1,43 @@
+.toc-link {
+
+    display: block;
+    padding: .45rem 0;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: .2s;
+
+}
+
+.toc-link:hover {
+
+    color: var(--primary);
+
+}
+
+.toc-link.active {
+
+    color: var(--primary);
+    font-weight: 600;
+
+}
+
+.toc-link.h2 {
+
+    padding-left: 0;
+
+}
+
+.toc-link.h3 {
+
+    padding-left: 1rem;
+    font-size: .95rem;
+
+}
+
+.toc-link.h4 {
+
+    padding-left: 2rem;
+    font-size: .9rem;
+    opacity: .85;
+
+}

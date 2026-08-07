@@ -365,3 +365,1278 @@
     }
 
 }
+
+
+/* ==========================================================
+   LIVRO.CODE
+   Sidebar
+   Parte 1
+   ========================================================== */
+
+
+/* ==========================================================
+   SIDEBAR
+   ========================================================== */
+
+.sidebar {
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: var(--surface);
+
+    overflow: hidden;
+
+}
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.sidebar-header {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem;
+
+    padding: 1.5rem;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.sidebar-title {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+.sidebar-title h2 {
+
+    font-size: 1rem;
+
+    margin: 0;
+
+}
+
+.sidebar-description {
+
+    font-size: .875rem;
+
+    color: var(--text-secondary);
+
+}
+
+
+/* ==========================================================
+   SEARCH
+   ========================================================== */
+
+.sidebar-search {
+
+    position: relative;
+
+}
+
+.sidebar-search input {
+
+    width: 100%;
+
+    height: 42px;
+
+    padding: 0 .9rem 0 2.6rem;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    background: var(--background);
+
+    color: var(--text-primary);
+
+}
+
+.sidebar-search svg {
+
+    position: absolute;
+
+    left: .9rem;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 18px;
+
+    height: 18px;
+
+    color: var(--text-secondary);
+
+}
+
+.sidebar-search input:focus {
+
+    outline: none;
+
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 3px rgba(37,99,235,.12);
+
+}
+
+
+/* ==========================================================
+   CONTENT
+   ========================================================== */
+
+.sidebar-content {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    padding: 1rem;
+
+}
+
+
+/* ==========================================================
+   SECTION
+   ========================================================== */
+
+.sidebar-section {
+
+    margin-bottom: 2rem;
+
+}
+
+.sidebar-section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: .75rem;
+
+    font-size: .8rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .08em;
+
+    color: var(--text-secondary);
+
+}
+
+
+/* ==========================================================
+   MENU
+   ========================================================== */
+
+.sidebar-menu {
+
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+.sidebar-item {
+
+    margin-bottom: .35rem;
+
+}
+
+.sidebar-link {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: .75rem;
+
+    width: 100%;
+
+    padding: .8rem .9rem;
+
+    border-radius: var(--radius);
+
+    color: var(--text-primary);
+
+    text-decoration: none;
+
+    transition: .25s;
+
+}
+
+.sidebar-link:hover {
+
+    background: var(--surface-hover);
+
+    color: var(--primary);
+
+}
+
+.sidebar-link.active {
+
+    background: rgba(37,99,235,.12);
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================================
+   ICON
+   ========================================================== */
+
+.sidebar-icon {
+
+    width: 20px;
+
+    height: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+}
+
+
+/* ==========================================================
+   LABEL
+   ========================================================== */
+
+.sidebar-label {
+
+    flex: 1;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+
+}
+
+
+/* ==========================================================
+   BADGE
+   ========================================================== */
+
+.sidebar-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 24px;
+
+    height: 24px;
+
+    padding-inline: .45rem;
+
+    border-radius: 999px;
+
+    background: var(--primary);
+
+    color: #fff;
+
+    font-size: .7rem;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================================
+   DIVIDER
+   ========================================================== */
+
+.sidebar-divider {
+
+    height: 1px;
+
+    background: var(--border);
+
+    margin: 1.5rem 0;
+
+}
+
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+.sidebar-footer {
+
+    padding: 1rem 1.5rem;
+
+    border-top: 1px solid var(--border);
+
+}
+
+.sidebar-version {
+
+    font-size: .8rem;
+
+    color: var(--text-secondary);
+
+}
+
+.sidebar-footer a {
+
+    color: var(--primary);
+
+    text-decoration: none;
+
+}
+
+
+/* ==========================================================
+   LIVRO.CODE
+   Sidebar
+   Parte 2
+   Navegação Hierárquica
+   ========================================================== */
+
+
+/* ==========================================================
+   TREE MENU
+   ========================================================== */
+
+.sidebar-tree{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.25rem;
+
+}
+
+
+/* ==========================================================
+   GROUP
+   ========================================================== */
+
+.sidebar-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.sidebar-group-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:.75rem;
+
+    padding:.8rem 1rem;
+
+    border-radius:var(--radius);
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    user-select:none;
+
+}
+
+.sidebar-group-header:hover{
+
+    background:var(--surface-hover);
+
+}
+
+.sidebar-group-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.75rem;
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================================
+   ARROW
+   ========================================================== */
+
+.sidebar-arrow{
+
+    width:16px;
+
+    height:16px;
+
+    transition:transform .25s ease;
+
+}
+
+.sidebar-group.open .sidebar-arrow{
+
+    transform:rotate(90deg);
+
+}
+
+
+/* ==========================================================
+   SUBMENU
+   ========================================================== */
+
+.sidebar-submenu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.25rem;
+
+    margin-left:1rem;
+
+    padding-left:1rem;
+
+    border-left:2px solid var(--border);
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .35s ease;
+
+}
+
+.sidebar-group.open .sidebar-submenu{
+
+    max-height:3000px;
+
+}
+
+
+/* ==========================================================
+   SUBMENU ITEMS
+   ========================================================== */
+
+.sidebar-submenu a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.75rem;
+
+    padding:.7rem .8rem;
+
+    border-radius:var(--radius);
+
+    text-decoration:none;
+
+    color:var(--text-secondary);
+
+    transition:.2s;
+
+}
+
+.sidebar-submenu a:hover{
+
+    background:var(--surface-hover);
+
+    color:var(--primary);
+
+}
+
+.sidebar-submenu a.active{
+
+    background:rgba(37,99,235,.12);
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================================
+   LESSON NUMBER
+   ========================================================== */
+
+.lesson-number{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:28px;
+
+    height:28px;
+
+    border-radius:50%;
+
+    background:var(--surface-hover);
+
+    font-size:.75rem;
+
+    font-weight:600;
+
+    flex-shrink:0;
+
+}
+
+
+/* ==========================================================
+   LESSON STATUS
+   ========================================================== */
+
+.lesson-status{
+
+    margin-left:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:18px;
+
+    height:18px;
+
+}
+
+.lesson-status.completed{
+
+    color:var(--success);
+
+}
+
+.lesson-status.locked{
+
+    color:var(--text-secondary);
+
+}
+
+.lesson-status.current{
+
+    color:var(--primary);
+
+}
+
+
+/* ==========================================================
+   FAVORITES
+   ========================================================== */
+
+.sidebar-favorite{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:18px;
+
+    height:18px;
+
+    opacity:.45;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.sidebar-favorite:hover{
+
+    opacity:1;
+
+    color:#f5b301;
+
+}
+
+.sidebar-favorite.active{
+
+    color:#f5b301;
+
+    opacity:1;
+
+}
+
+
+/* ==========================================================
+   PROGRESS
+   ========================================================== */
+
+.sidebar-progress{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.5rem;
+
+    margin-top:1rem;
+
+}
+
+.sidebar-progress-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    font-size:.8rem;
+
+    color:var(--text-secondary);
+
+}
+
+.sidebar-progress-bar{
+
+    width:100%;
+
+    height:8px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    background:var(--surface-hover);
+
+}
+
+.sidebar-progress-fill{
+
+    height:100%;
+
+    width:45%;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        #60a5fa
+    );
+
+    border-radius:999px;
+
+}
+
+
+/* ==========================================================
+   CURRENT LESSON
+   ========================================================== */
+
+.sidebar-current{
+
+    position:relative;
+
+}
+
+.sidebar-current::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-1rem;
+
+    top:8px;
+
+    width:4px;
+
+    height:32px;
+
+    border-radius:999px;
+
+    background:var(--primary);
+
+}
+
+
+/* ==========================================================
+   CHAPTER BADGE
+   ========================================================== */
+
+.chapter-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:28px;
+
+    height:22px;
+
+    padding-inline:.5rem;
+
+    border-radius:999px;
+
+    background:rgba(37,99,235,.12);
+
+    color:var(--primary);
+
+    font-size:.75rem;
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================================
+   COURSE COMPLETED
+   ========================================================== */
+
+.course-complete{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.75rem;
+
+    margin-top:1rem;
+
+    padding:1rem;
+
+    border-radius:var(--radius-lg);
+
+    background:rgba(34,197,94,.12);
+
+    color:var(--success);
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================================
+   PINNED
+   ========================================================== */
+
+.sidebar-pinned{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.5rem;
+
+}
+
+.sidebar-pinned-title{
+
+    font-size:.8rem;
+
+    text-transform:uppercase;
+
+    color:var(--text-secondary);
+
+}
+
+.sidebar-pinned a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.75rem;
+
+    padding:.75rem;
+
+    border-radius:var(--radius);
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+.sidebar-pinned a:hover{
+
+    background:var(--surface-hover);
+
+}
+
+
+/* ==========================================================
+   LIVRO.CODE
+   Sidebar
+   Parte 3 (Final)
+   Responsividade • Dark Mode • Collapse
+   ========================================================== */
+
+
+/* ==========================================================
+   COLLAPSED SIDEBAR
+   ========================================================== */
+
+.sidebar.collapsed{
+
+    width:80px;
+
+}
+
+.sidebar.collapsed .sidebar-label,
+.sidebar.collapsed .sidebar-description,
+.sidebar.collapsed .sidebar-version,
+.sidebar.collapsed .sidebar-progress,
+.sidebar.collapsed .sidebar-section-title,
+.sidebar.collapsed .sidebar-badge,
+.sidebar.collapsed .sidebar-submenu{
+
+    display:none;
+
+}
+
+.sidebar.collapsed .sidebar-link{
+
+    justify-content:center;
+
+    padding:.85rem;
+
+}
+
+.sidebar.collapsed .sidebar-icon{
+
+    margin:0;
+
+}
+
+
+/* ==========================================================
+   COLLAPSE BUTTON
+   ========================================================== */
+
+.sidebar-collapse{
+
+    width:38px;
+
+    height:38px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:none;
+
+    border-radius:var(--radius);
+
+    background:transparent;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.sidebar-collapse:hover{
+
+    background:var(--surface-hover);
+
+}
+
+.sidebar-collapse svg{
+
+    transition:transform .25s;
+
+}
+
+.sidebar.collapsed .sidebar-collapse svg{
+
+    transform:rotate(180deg);
+
+}
+
+
+/* ==========================================================
+   SCROLLSPY
+   ========================================================== */
+
+.sidebar-link.current{
+
+    position:relative;
+
+    background:rgba(37,99,235,.10);
+
+    color:var(--primary);
+
+}
+
+.sidebar-link.current::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-1rem;
+
+    top:8px;
+
+    width:4px;
+
+    height:28px;
+
+    border-radius:999px;
+
+    background:var(--primary);
+
+}
+
+
+/* ==========================================================
+   HOVER EFFECT
+   ========================================================== */
+
+.sidebar-link{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.sidebar-link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:0;
+
+    height:100%;
+
+    background:rgba(37,99,235,.06);
+
+    transition:width .3s ease;
+
+}
+
+.sidebar-link:hover::after{
+
+    width:100%;
+
+}
+
+.sidebar-link>*{
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+
+/* ==========================================================
+   CUSTOM SCROLL
+   ========================================================== */
+
+.sidebar-content::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.sidebar-content::-webkit-scrollbar-thumb{
+
+    background:var(--border);
+
+    border-radius:999px;
+
+}
+
+.sidebar-content::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary);
+
+}
+
+
+/* ==========================================================
+   ANIMATIONS
+   ========================================================== */
+
+@keyframes sidebarFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+.sidebar-item{
+
+    animation:sidebarFade .35s ease;
+
+}
+
+
+/* ==========================================================
+   ACCESSIBILITY
+   ========================================================== */
+
+.sidebar a:focus-visible,
+.sidebar button:focus-visible,
+.sidebar input:focus-visible{
+
+    outline:2px solid var(--primary);
+
+    outline-offset:3px;
+
+}
+
+
+/* ==========================================================
+   DARK MODE
+   ========================================================== */
+
+[data-theme="dark"] .sidebar{
+
+    background:#181818;
+
+    border-color:rgba(255,255,255,.08);
+
+}
+
+[data-theme="dark"] .sidebar-search input{
+
+    background:#232323;
+
+}
+
+[data-theme="dark"] .sidebar-link:hover{
+
+    background:rgba(255,255,255,.05);
+
+}
+
+[data-theme="dark"] .sidebar-group-header:hover{
+
+    background:rgba(255,255,255,.05);
+
+}
+
+[data-theme="dark"] .sidebar-submenu{
+
+    border-left-color:rgba(255,255,255,.08);
+
+}
+
+
+/* ==========================================================
+   MOBILE SIDEBAR
+   ========================================================== */
+
+@media(max-width:992px){
+
+    .sidebar{
+
+        position:fixed;
+
+        left:-100%;
+
+        top:var(--navbar-height);
+
+        width:320px;
+
+        max-width:90vw;
+
+        height:calc(100vh - var(--navbar-height));
+
+        z-index:999;
+
+        transition:left .35s ease;
+
+        box-shadow:var(--shadow-lg);
+
+    }
+
+    .sidebar.open{
+
+        left:0;
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE OVERLAY
+   ========================================================== */
+
+.sidebar-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:998;
+
+}
+
+.sidebar-overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media(max-width:768px){
+
+    .sidebar{
+
+        width:280px;
+
+    }
+
+    .sidebar-header{
+
+        padding:1rem;
+
+    }
+
+    .sidebar-content{
+
+        padding:.75rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+   ========================================================== */
+
+@media(max-width:480px){
+
+    .sidebar{
+
+        width:100%;
+
+        max-width:100%;
+
+    }
+
+}
+
+
+/* ==========================================================
+   LARGE SCREEN
+   ========================================================== */
+
+@media(min-width:1600px){
+
+    .sidebar{
+
+        width:320px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   PRINT
+   ========================================================== */
+
+@media print{
+
+    .sidebar{
+
+        display:none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+   ========================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    .sidebar,
+    .sidebar *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+}

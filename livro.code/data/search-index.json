@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Introdução ao HTML",
+        "description": "Aprenda os conceitos básicos do HTML.",
+        "url": "/chapters/01-html/index.html",
+        "category": "HTML",
+        "keywords": [
+            "html",
+            "introdução",
+            "tags",
+            "web"
+        ]
+    },
+    {
+        "title": "Tags HTML",
+        "description": "Conheça as principais tags do HTML.",
+        "url": "/chapters/01-html/02-tags.html",
+        "category": "HTML",
+        "keywords": [
+            "div",
+            "span",
+            "header",
+            "footer"
+        ]
+    }
+]

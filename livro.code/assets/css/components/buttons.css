@@ -1,48 +1,73 @@
-/* ==========================================================
-   LIVRO.CODE
-   Buttons CSS
-   Sistema de Botões
-   Versão: 1.0
-========================================================== */
 
 /* ==========================================================
-   BASE BUTTON
-========================================================== */
+   LIVRO.CODE
+   BUTTON SYSTEM
+   ========================================================== */
+
+/* ==========================================================
+   BUTTON BASE
+   ========================================================== */
 
 .btn{
 
+    --btn-bg: var(--primary);
+    --btn-color: #fff;
+    --btn-border: transparent;
+
     display:inline-flex;
+
     align-items:center;
+
     justify-content:center;
-    gap:var(--space-2);
 
-    padding:12px 22px;
+    gap:.75rem;
 
-    min-height:46px;
+    min-height:44px;
 
-    border:1px solid transparent;
-    border-radius:var(--radius-md);
+    padding:.75rem 1.25rem;
 
-    font-family:var(--font-primary);
-    font-size:var(--text-base);
-    font-weight:var(--font-semibold);
+    border:1px solid var(--btn-border);
+
+    border-radius:var(--radius);
+
+    background:var(--btn-bg);
+
+    color:var(--btn-color);
+
+    font-family:inherit;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    line-height:1;
+
+    text-decoration:none;
 
     cursor:pointer;
-    user-select:none;
 
     transition:
-        background var(--transition-fast),
-        border-color var(--transition-fast),
-        color var(--transition-fast),
-        transform var(--transition-fast),
-        box-shadow var(--transition-fast);
+        background .25s,
+        border-color .25s,
+        color .25s,
+        transform .15s,
+        box-shadow .25s;
+
+    user-select:none;
 
     white-space:nowrap;
+
+    position:relative;
+
+    overflow:hidden;
+
 }
 
 .btn:hover{
 
     transform:translateY(-2px);
+
+    box-shadow:var(--shadow);
 
 }
 
@@ -56,185 +81,32 @@
 
     outline:none;
 
-    box-shadow:0 0 0 4px rgba(37,99,235,.20);
+    box-shadow:
+        0 0 0 4px rgba(37,99,235,.18);
 
 }
 
 /* ==========================================================
-   PRIMARY
-========================================================== */
+   ICON
+   ========================================================== */
 
-.btn-primary{
+.btn svg{
 
-    background:var(--primary-600);
+    width:18px;
 
-    color:white;
+    height:18px;
 
-}
-
-.btn-primary:hover{
-
-    background:var(--primary-700);
+    flex-shrink:0;
 
 }
-
-/* ==========================================================
-   SECONDARY
-========================================================== */
-
-.btn-secondary{
-
-    background:var(--secondary-600);
-
-    color:white;
-
-}
-
-.btn-secondary:hover{
-
-    background:var(--secondary-700);
-
-}
-
-/* ==========================================================
-   SUCCESS
-========================================================== */
-
-.btn-success{
-
-    background:var(--success-600);
-
-    color:white;
-
-}
-
-.btn-success:hover{
-
-    background:var(--success-700);
-
-}
-
-/* ==========================================================
-   WARNING
-========================================================== */
-
-.btn-warning{
-
-    background:var(--warning-500);
-
-    color:white;
-
-}
-
-.btn-warning:hover{
-
-    background:var(--warning-600);
-
-}
-
-/* ==========================================================
-   DANGER
-========================================================== */
-
-.btn-danger{
-
-    background:var(--danger-600);
-
-    color:white;
-
-}
-
-.btn-danger:hover{
-
-    background:var(--danger-700);
-
-}
-
-/* ==========================================================
-   OUTLINE
-========================================================== */
-
-.btn-outline{
-
-    background:transparent;
-
-    border-color:var(--border);
-
-    color:var(--text);
-
-}
-
-.btn-outline:hover{
-
-    background:var(--surface-hover);
-
-    border-color:var(--primary-600);
-
-    color:var(--primary-600);
-
-}
-
-/* ==========================================================
-   GHOST
-========================================================== */
-
-.btn-ghost{
-
-    background:transparent;
-
-    color:var(--text);
-
-}
-
-.btn-ghost:hover{
-
-    background:var(--surface-hover);
-
-}
-
-/* ==========================================================
-   LINK
-========================================================== */
-
-.btn-link{
-
-    background:none;
-
-    padding:0;
-
-    min-height:auto;
-
-    border:none;
-
-    color:var(--primary-600);
-
-    font-weight:600;
-
-}
-
-.btn-link:hover{
-
-    color:var(--primary-700);
-
-    text-decoration:underline;
-
-    transform:none;
-
-}
-
-/* ==========================================================
-   ICON BUTTON
-========================================================== */
 
 .btn-icon{
 
-    width:46px;
+    width:44px;
 
-    height:46px;
+    height:44px;
 
     padding:0;
-
-    border-radius:50%;
 
 }
 
@@ -248,37 +120,57 @@
 
 /* ==========================================================
    SIZES
-========================================================== */
+   ========================================================== */
+
+.btn-xs{
+
+    min-height:30px;
+
+    padding:.35rem .75rem;
+
+    font-size:.75rem;
+
+}
 
 .btn-sm{
 
     min-height:36px;
 
-    padding:8px 16px;
+    padding:.55rem .9rem;
 
-    font-size:var(--text-sm);
+    font-size:.875rem;
 
 }
 
 .btn-md{
 
-    min-height:46px;
+    min-height:44px;
 
 }
 
 .btn-lg{
 
-    min-height:56px;
+    min-height:52px;
 
-    padding:16px 28px;
+    padding:1rem 1.5rem;
 
-    font-size:var(--text-lg);
+    font-size:1rem;
+
+}
+
+.btn-xl{
+
+    min-height:60px;
+
+    padding:1.2rem 2rem;
+
+    font-size:1.1rem;
 
 }
 
 /* ==========================================================
    BLOCK
-========================================================== */
+   ========================================================== */
 
 .btn-block{
 
@@ -287,29 +179,429 @@
 }
 
 /* ==========================================================
-   DISABLED
-========================================================== */
+   ROUNDED
+   ========================================================== */
 
-.btn:disabled,
-.btn.disabled{
+.btn-pill{
 
-    opacity:.6;
+    border-radius:999px;
 
-    cursor:not-allowed;
+}
 
-    pointer-events:none;
+.btn-square{
+
+    border-radius:0;
+
+}
+
+.btn-rounded{
+
+    border-radius:var(--radius-xl);
+
+}
+
+/* ==========================================================
+   PRIMARY
+   ========================================================== */
+
+.btn-primary{
+
+    --btn-bg:var(--primary);
+
+    --btn-color:#fff;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* ==========================================================
+   SECONDARY
+   ========================================================== */
+
+.btn-secondary{
+
+    --btn-bg:var(--secondary);
+
+    --btn-color:#fff;
+
+}
+
+.btn-secondary:hover{
+
+    filter:brightness(.95);
+
+}
+
+/* ==========================================================
+   SUCCESS
+   ========================================================== */
+
+.btn-success{
+
+    --btn-bg:var(--success);
+
+    --btn-color:#fff;
+
+}
+
+.btn-success:hover{
+
+    filter:brightness(.95);
+
+}
+
+/* ==========================================================
+   WARNING
+   ========================================================== */
+
+.btn-warning{
+
+    --btn-bg:var(--warning);
+
+    --btn-color:#111;
+
+}
+
+.btn-warning:hover{
+
+    filter:brightness(.95);
+
+}
+
+/* ==========================================================
+   DANGER
+   ========================================================== */
+
+.btn-danger{
+
+    --btn-bg:var(--danger);
+
+    --btn-color:#fff;
+
+}
+
+.btn-danger:hover{
+
+    filter:brightness(.95);
+
+}
+
+/* ==========================================================
+   INFO
+   ========================================================== */
+
+.btn-info{
+
+    --btn-bg:#0ea5e9;
+
+    --btn-color:#fff;
+
+}
+
+.btn-info:hover{
+
+    filter:brightness(.95);
+
+}
+
+/* ==========================================================
+   LIVRO.CODE
+   BUTTON SYSTEM
+   Parte 2
+   Variantes Avançadas
+   ========================================================== */
+
+/* ==========================================================
+   OUTLINE BUTTONS
+   ========================================================== */
+
+.btn-outline-primary{
+
+    background:transparent;
+
+    border:1px solid var(--primary);
+
+    color:var(--primary);
+
+}
+
+.btn-outline-primary:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.btn-outline-secondary{
+
+    background:transparent;
+
+    border:1px solid var(--secondary);
+
+    color:var(--secondary);
+
+}
+
+.btn-outline-secondary:hover{
+
+    background:var(--secondary);
+
+    color:#fff;
+
+}
+
+.btn-outline-success{
+
+    background:transparent;
+
+    border-color:var(--success);
+
+    color:var(--success);
+
+}
+
+.btn-outline-success:hover{
+
+    background:var(--success);
+
+    color:#fff;
+
+}
+
+.btn-outline-warning{
+
+    background:transparent;
+
+    border-color:var(--warning);
+
+    color:var(--warning);
+
+}
+
+.btn-outline-warning:hover{
+
+    background:var(--warning);
+
+    color:#111;
+
+}
+
+.btn-outline-danger{
+
+    background:transparent;
+
+    border-color:var(--danger);
+
+    color:var(--danger);
+
+}
+
+.btn-outline-danger:hover{
+
+    background:var(--danger);
+
+    color:#fff;
+
+}
+
+/* ==========================================================
+   GHOST BUTTONS
+   ========================================================== */
+
+.btn-ghost{
+
+    background:transparent;
+
+    border:none;
+
+    color:var(--text-primary);
+
+    box-shadow:none;
+
+}
+
+.btn-ghost:hover{
+
+    background:var(--surface-hover);
+
+}
+
+.btn-ghost-primary{
+
+    color:var(--primary);
+
+}
+
+.btn-ghost-primary:hover{
+
+    background:rgba(37,99,235,.10);
+
+}
+
+/* ==========================================================
+   SOFT BUTTONS
+   ========================================================== */
+
+.btn-soft-primary{
+
+    background:rgba(37,99,235,.12);
+
+    color:var(--primary);
+
+}
+
+.btn-soft-primary:hover{
+
+    background:rgba(37,99,235,.18);
+
+}
+
+.btn-soft-success{
+
+    background:rgba(34,197,94,.12);
+
+    color:var(--success);
+
+}
+
+.btn-soft-success:hover{
+
+    background:rgba(34,197,94,.18);
+
+}
+
+.btn-soft-warning{
+
+    background:rgba(245,158,11,.12);
+
+    color:var(--warning);
+
+}
+
+.btn-soft-warning:hover{
+
+    background:rgba(245,158,11,.18);
+
+}
+
+.btn-soft-danger{
+
+    background:rgba(239,68,68,.12);
+
+    color:var(--danger);
+
+}
+
+.btn-soft-danger:hover{
+
+    background:rgba(239,68,68,.18);
+
+}
+
+/* ==========================================================
+   LIGHT BUTTON
+   ========================================================== */
+
+.btn-light{
+
+    background:#ffffff;
+
+    color:#111827;
+
+    border:1px solid var(--border);
+
+}
+
+.btn-light:hover{
+
+    background:#f5f5f5;
+
+}
+
+/* ==========================================================
+   DARK BUTTON
+   ========================================================== */
+
+.btn-dark{
+
+    background:#111827;
+
+    color:#fff;
+
+}
+
+.btn-dark:hover{
+
+    background:#1f2937;
+
+}
+
+/* ==========================================================
+   LINK BUTTON
+   ========================================================== */
+
+.btn-link{
+
+    background:none;
+
+    border:none;
+
+    color:var(--primary);
+
+    padding:0;
+
+    min-height:auto;
+
+    box-shadow:none;
+
+}
+
+.btn-link:hover{
+
+    text-decoration:underline;
+
+    transform:none;
+
+}
+
+/* ==========================================================
+   FAB
+   ========================================================== */
+
+.btn-fab{
+
+    position:fixed;
+
+    right:2rem;
+
+    bottom:2rem;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    box-shadow:var(--shadow-lg);
+
+    z-index:900;
 
 }
 
 /* ==========================================================
    LOADING
-========================================================== */
+   ========================================================== */
 
 .btn-loading{
 
     pointer-events:none;
 
-    opacity:.85;
+    opacity:.8;
 
 }
 
@@ -317,13 +609,13 @@
 
     content:"";
 
-    width:18px;
+    width:16px;
 
-    height:18px;
+    height:16px;
 
-    border:2px solid rgba(255,255,255,.35);
+    border:2px solid rgba(255,255,255,.4);
 
-    border-top-color:white;
+    border-top-color:#fff;
 
     border-radius:50%;
 
@@ -332,8 +624,24 @@
 }
 
 /* ==========================================================
-   BADGE
-========================================================== */
+   DISABLED
+   ========================================================== */
+
+.btn:disabled,
+
+.btn.disabled{
+
+    opacity:.5;
+
+    cursor:not-allowed;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   BUTTON WITH BADGE
+   ========================================================== */
 
 .btn-badge{
 
@@ -341,9 +649,7 @@
 
 }
 
-.btn-badge::after{
-
-    content:attr(data-badge);
+.btn-badge span{
 
     position:absolute;
 
@@ -351,55 +657,133 @@
 
     right:-6px;
 
-    min-width:20px;
+    width:20px;
 
     height:20px;
 
-    padding:0 6px;
+    border-radius:50%;
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border-radius:999px;
-
-    background:var(--danger-600);
+    background:var(--danger);
 
     color:#fff;
 
-    font-size:.70rem;
+    display:flex;
 
-    font-weight:700;
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:.65rem;
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+   SOCIAL BUTTONS
+   ========================================================== */
+
+.btn-github{
+
+    background:#24292f;
+
+    color:#fff;
+
+}
+
+.btn-discord{
+
+    background:#5865F2;
+
+    color:#fff;
+
+}
+
+.btn-linkedin{
+
+    background:#0A66C2;
+
+    color:#fff;
+
+}
+
+.btn-google{
+
+    background:#ffffff;
+
+    color:#333;
+
+    border:1px solid var(--border);
 
 }
 
 /* ==========================================================
    BUTTON GROUP
-========================================================== */
+   ========================================================== */
 
 .btn-group{
 
     display:inline-flex;
 
-    gap:var(--space-3);
+    gap:.5rem;
 
     flex-wrap:wrap;
 
 }
 
+.btn-group-vertical{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.5rem;
+
+}
+
+/* ==========================================================
+   SPLIT BUTTON
+   ========================================================== */
+
+.btn-split{
+
+    display:inline-flex;
+
+    overflow:hidden;
+
+    border-radius:var(--radius);
+
+}
+
+.btn-split .btn{
+
+    border-radius:0;
+
+}
+
+.btn-split .btn:first-child{
+
+    border-top-left-radius:var(--radius);
+
+    border-bottom-left-radius:var(--radius);
+
+}
+
+.btn-split .btn:last-child{
+
+    border-top-right-radius:var(--radius);
+
+    border-bottom-right-radius:var(--radius);
+
+    width:48px;
+
+}
+
 /* ==========================================================
    ANIMATION
-========================================================== */
+   ========================================================== */
 
 @keyframes btn-spin{
-
-    from{
-
-        transform:rotate(0deg);
-
-    }
 
     to{
 
@@ -410,8 +794,373 @@
 }
 
 /* ==========================================================
+   LIVRO.CODE
+   BUTTON SYSTEM
+   Parte 3 (Final)
+   ========================================================== */
+
+
+/* ==========================================================
+   RIPPLE EFFECT
+   ========================================================== */
+
+.btn{
+
+    isolation:isolate;
+
+}
+
+.btn::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    width:0;
+
+    height:0;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.25);
+
+    transform:translate(-50%,-50%);
+
+    transition:
+
+        width .45s,
+
+        height .45s,
+
+        opacity .45s;
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+.btn:active::after{
+
+    width:260px;
+
+    height:260px;
+
+    opacity:1;
+
+}
+
+
+/* ==========================================================
+   GLASS BUTTON
+   ========================================================== */
+
+.btn-glass{
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    color:var(--text-primary);
+
+}
+
+.btn-glass:hover{
+
+    background:rgba(255,255,255,.25);
+
+}
+
+
+/* ==========================================================
+   GRADIENT BUTTONS
+   ========================================================== */
+
+.btn-gradient-primary{
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
+
+    color:#fff;
+
+}
+
+.btn-gradient-success{
+
+    background:linear-gradient(
+        135deg,
+        #16a34a,
+        #22c55e
+    );
+
+    color:#fff;
+
+}
+
+.btn-gradient-danger{
+
+    background:linear-gradient(
+        135deg,
+        #dc2626,
+        #ef4444
+    );
+
+    color:#fff;
+
+}
+
+
+/* ==========================================================
+   ELEVATED BUTTON
+   ========================================================== */
+
+.btn-elevated{
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.btn-elevated:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+/* ==========================================================
+   ICON POSITIONS
+   ========================================================== */
+
+.btn-icon-left{
+
+    flex-direction:row;
+
+}
+
+.btn-icon-right{
+
+    flex-direction:row-reverse;
+
+}
+
+
+/* ==========================================================
+   BUTTON TOOLBAR
+   ========================================================== */
+
+.btn-toolbar{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:1rem;
+
+}
+
+
+/* ==========================================================
+   PAGINATION BUTTON
+   ========================================================== */
+
+.btn-page{
+
+    width:42px;
+
+    height:42px;
+
+    padding:0;
+
+}
+
+.btn-page.active{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+
+/* ==========================================================
+   CARD ACTION BUTTON
+   ========================================================== */
+
+.btn-card{
+
+    width:100%;
+
+    justify-content:space-between;
+
+}
+
+
+/* ==========================================================
+   NAVIGATION BUTTON
+   ========================================================== */
+
+.btn-next{
+
+    padding-inline:2rem;
+
+}
+
+.btn-prev{
+
+    padding-inline:2rem;
+
+}
+
+
+/* ==========================================================
+   BUTTON WITH SUBTITLE
+   ========================================================== */
+
+.btn-double{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:.25rem;
+
+}
+
+.btn-double small{
+
+    font-size:.72rem;
+
+    opacity:.75;
+
+}
+
+
+/* ==========================================================
+   PULSE
+   ========================================================== */
+
+.btn-pulse{
+
+    animation:btnPulse 2s infinite;
+
+}
+
+@keyframes btnPulse{
+
+    0%{
+
+        box-shadow:0 0 0 0 rgba(37,99,235,.45);
+
+    }
+
+    70%{
+
+        box-shadow:0 0 0 14px rgba(37,99,235,0);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 0 rgba(37,99,235,0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   SHAKE
+   ========================================================== */
+
+.btn-shake:hover{
+
+    animation:shake .45s;
+
+}
+
+@keyframes shake{
+
+    25%{
+
+        transform:translateX(-2px);
+
+    }
+
+    50%{
+
+        transform:translateX(2px);
+
+    }
+
+    75%{
+
+        transform:translateX(-2px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   FLOAT
+   ========================================================== */
+
+.btn-float:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+/* ==========================================================
+   DARK MODE
+   ========================================================== */
+
+[data-theme="dark"] .btn-light{
+
+    background:#262626;
+
+    color:#fff;
+
+    border-color:#3b3b3b;
+
+}
+
+[data-theme="dark"] .btn-glass{
+
+    background:rgba(255,255,255,.06);
+
+    border-color:rgba(255,255,255,.08);
+
+}
+
+[data-theme="dark"] .btn-outline-primary{
+
+    color:#60a5fa;
+
+    border-color:#60a5fa;
+
+}
+
+
+/* ==========================================================
    RESPONSIVE
-========================================================== */
+   ========================================================== */
 
 @media(max-width:768px){
 
@@ -421,19 +1170,53 @@
 
     }
 
-    .btn-group{
-
-        display:flex;
+    .btn-toolbar{
 
         flex-direction:column;
 
-        width:100%;
+        align-items:stretch;
 
     }
 
-    .btn-icon{
+    .btn-group{
 
-        width:46px;
+        width:100%;
+
+        flex-direction:column;
+
+    }
+
+}
+
+
+/* ==========================================================
+   PRINT
+   ========================================================== */
+
+@media print{
+
+    .btn{
+
+        display:none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+   ========================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    .btn,
+
+    .btn::after{
+
+        transition:none !important;
+
+        animation:none !important;
 
     }
 
